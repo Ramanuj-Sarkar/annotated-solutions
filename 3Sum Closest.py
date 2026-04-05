@@ -1,3 +1,5 @@
+# find the three numbers in nums which sum to the target value
+# or find the three numbers which come closest
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
         minsum = nums[0] + nums[1] + nums[2]  # smallest sum
