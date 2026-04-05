@@ -1,4 +1,6 @@
-# comments should explain everything
+# The array shows the maximum jump forward you can make from that point
+# You start at the first element of the array
+# Return true if you can reach the end by jumping forward and false if you can't.
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         jumping = 0
