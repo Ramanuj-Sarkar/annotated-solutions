@@ -1,3 +1,6 @@
+# There are rocks at the integer coordinate points in stones
+# A stone can be removed if it shares either the same row or the same column as another stone that has not been removed.
+# Return the largest possible number of stones that can be removed.
 class Solution:
     def removeStones(self, stones: List[List[int]]) -> int:
         n = len(stones)
