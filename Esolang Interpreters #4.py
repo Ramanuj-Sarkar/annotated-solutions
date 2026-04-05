@@ -22,7 +22,7 @@ def boolf(code, input_string=""):
     while pointer < len(code):
         if code[pointer] == '>':
             location += 1
-            if location == len(tape):
+            if location == len(tape):  # tape can get bigger
                 tape.append(0)
         elif code[pointer] == '<':
             if location == 0:
@@ -30,17 +30,17 @@ def boolf(code, input_string=""):
             else:
                 location -= 1
         elif code[pointer] == '+':
-            tape[location] = (tape[location] + 1) % 2
+            tape[location] = (tape[location] + 1) % 2  # flips bit
         elif code[pointer] == ';':
             bit_output += str(tape[location])
-            if len(bit_output) == 8:
+            if len(bit_output) == 8:  # outputs ASCII every 8
                 decimal = 0
                 for digit in range(8):
                     decimal += int(bit_output[digit]) * (2**digit)
                 output += chr(decimal)
                 bit_output = ''
         elif code[pointer] == ',':
-            if bit_input == '' and input_string == '':
+            if bit_input == '' and input_string == '':  # this occurs on null input
                 bit_input = '00000000'
             if bit_input == '':
                 decimal = ord(input_string[0])
@@ -56,7 +56,7 @@ def boolf(code, input_string=""):
             if tape[location] == 1:
                 pointer = corresponding_bracket[pointer]
         pointer += 1
-    if bit_output != '':
+    if bit_output != '':  # in case something didn't get output (probably should be 8-based)
         decimal = 0
         for digit in range(len(bit_output)):
             decimal += int(bit_output[digit]) * (2**digit)
