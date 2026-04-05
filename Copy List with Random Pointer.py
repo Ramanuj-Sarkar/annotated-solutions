@@ -1,4 +1,11 @@
 """
+Makes a deep copy of a linked list 
+where each node has a next pointer pointing to the next value
+and a random pointer pointing to another value
+both of these have to stay the same in the copy
+(like, if next = 1 and random = 5 in the original, it's also like that in the deep copy)
+it returns a pointer to the head
+
 # Definition for a Node.
 class Node:
     def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
