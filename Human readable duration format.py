@@ -1,3 +1,6 @@
+'''
+This turns a number of seconds into a format which people can understand.
+'''
 def format_duration(seconds):
     if seconds == 0:
         return "now"
