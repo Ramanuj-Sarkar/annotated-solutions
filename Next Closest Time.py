@@ -1,3 +1,6 @@
+# You have a time like HH:MM (HH goes from 00 to 23)
+# You have to return the closest time that is after that time with those digits
+# if the time is at the end of the day like 23:59, you say the time is the next day
 class Solution:
     def nextClosestTime(self, time: str) -> str:
         hour, minute = time.split(":")
