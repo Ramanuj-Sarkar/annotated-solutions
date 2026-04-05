@@ -1,3 +1,6 @@
+# You find the k closest points to the origin.
+# You are given a list of x and y coordinates.
+# You return a list of coordinates.
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
 
