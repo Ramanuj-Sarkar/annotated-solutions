@@ -1,3 +1,8 @@
+# You get a string like "2[a]3[bc]"
+# You have to decode the string in the brackets as many times as the number before
+# "2[a]3[bc]" -> aabcbcbc
+# "2[a3[b]]" -> abbbabbb
+# You return that string
 class Solution:
     def decodeString(self, s: str) -> str:
         stack = []
