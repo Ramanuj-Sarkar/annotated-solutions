@@ -1,3 +1,6 @@
+/*
+This turns a number of seconds into a format which people can understand.
+*/
 public class TimeFormatter {
     
     public static String formatDuration(int seconds) {
