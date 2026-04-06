@@ -1,3 +1,6 @@
+# The goal is to transform beginWord into endWord using the words in wordList.
+# You can only transform one letter at a time, but all the words are the same length.
+# You return how many words were used, and if it is impossible, you return 0.
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         if not all([endWord in wordList, endWord, beginWord, wordList]):
