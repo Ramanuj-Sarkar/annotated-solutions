@@ -16,7 +16,7 @@ public class Parser {
         for (String word : StrArray) {
             if(word.equals("hundred")){
               if(saidMillion || saidThousand){
-                int pushUp = finalNumber % 10;
+                int pushUp = finalNumber % 10; // they don't say "nineteen hundred", so it's always from 1-9
                 finalNumber -= pushUp;
                 finalNumber += 100 * pushUp;
               }
