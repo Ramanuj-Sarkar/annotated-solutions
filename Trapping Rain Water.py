@@ -1,3 +1,13 @@
+# You have a list of 2D spike heights, essentially
+# and you have to figure out how much water is in between them.
+# It's kind of like:
+# [2, 0, 1, 1, 1, 2, 0, 0, 1]
+# corresponds to
+# X     X
+# X XX XX  X
+# and you figure out how much water would get stuck here (w is water)
+# XwwwwwX
+# XwXXwXXwwX
 class Solution:
     def trap(self, height: List[int]) -> int:
         start = 0
