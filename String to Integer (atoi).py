@@ -1,3 +1,7 @@
+# Take in a string which may contain an integer
+# and, from the start, analyze it as though trying to insert it
+# into a 32-bit integer, meaning that you find the numerical part
+# and you round it down to the MAX or up to the MIN if necessary
 class Solution:
     def myAtoi(self, s: str) -> int:
         # Constants for 32-bit signed integer range
