@@ -1,3 +1,6 @@
+# You need to remove the Nth from the end.
+# For example, if n is 2, you remove the second-to-last node.
+#
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
