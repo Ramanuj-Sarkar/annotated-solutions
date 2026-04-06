@@ -1,3 +1,7 @@
+# The robot understands the following commands:
+# -2 means turn 90 degrees left, -1 means turn 90 degrees right, 1 <= k <= 9 means move k steps forward
+# the robot starts facing north
+# the robot can't go on obstacles and stops behind them, in whatever direction it arrived from
 class Solution:
     def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
         # position is the position
