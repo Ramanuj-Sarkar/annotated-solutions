@@ -1,3 +1,7 @@
+/*
+The string says a number.
+The goal is to output the number the string is saying.
+*/
 public class Parser {
     
     public static int parseInt(String numStr) {
