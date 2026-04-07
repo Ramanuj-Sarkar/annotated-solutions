@@ -1,0 +1,42 @@
+# This efficiently stores and retrieves keys in a database of strings.
+# 
+class Trie:
+
+    def __init__(self):
+        # dict of dicts
+        self.root = {}
+        
+    # inserts into Trie
+    def insert(self, word: str) -> None:
+        curr = self.root
+
+        for w in word:
+            # adds new dict
+            if w not in curr:
+                curr[w] = {}
+            # sets this up for the next letter
+            curr = curr[w]
+
+        # shows this is the end of a word
+        curr['end'] = True
+
+    # method used in search() and startsWith()
+    def iterate(self, word: str) -> (bool, bool):
+        curr = self.root
+
+        for w in word:
+            # such a letter sequence has never been seen
+            if w not in curr:
+                return (False, False)
+            curr = curr[w]
+
+        # returns ("Has this sequence been seen?", "Is this a whole word?")
+        return (True, 'end' in curr)
+
+    # search for a whole word
+    def search(self, word: str) -> bool:
+        return self.iterate(word)[1]
+        
+    # search for the beginning of a word
+    def startsWith(self, prefix: str) -> bool:
+        return self.iterate(prefix)[0]
