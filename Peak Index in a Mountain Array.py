@@ -1,14 +1,14 @@
 # We are given an array of at least length 3
 # where the values increase to a peak and then decrease.
 # We have to return the peak in O(lg(n)) time.
+# We are given an array of at least length 3
+# where the values increase to a peak and then decrease.
+# We have to return the peak in O(lg(n)) time.
 class Solution:
     def peakIndexInMountainArray(self, arr: List[int]) -> int:
         start, end = 0, len(arr) - 1
-        
-        # it's similar to binary sort
-        return self.binaryPeak(arr, start, end)
-    
-    def binaryPeak(self, arr: List[int], start: int, end: int) -> int:
+
+        # it's like binary search
         while start <= end:
             # find the median
             mid = (start + end) // 2
@@ -29,3 +29,4 @@ class Solution:
                 end = mid - 1
             else:  # the peak is to the right
                 start = mid + 1
+
